@@ -1,0 +1,18 @@
+public class course.examples.threading.threadingasynctask.Info extends java.lang.Object
+{
+    java.lang.Integer doinbgd;
+    int id;
+    android.graphics.Bitmap onpostexec;
+    java.lang.Integer onprogressup;
+
+    public void <init>()
+    {
+        course.examples.threading.threadingasynctask.Info $r0;
+
+        $r0 := @this: course.examples.threading.threadingasynctask.Info;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+}

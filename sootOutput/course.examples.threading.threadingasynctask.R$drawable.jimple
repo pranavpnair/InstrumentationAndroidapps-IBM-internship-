@@ -1,0 +1,25 @@
+public final class course.examples.threading.threadingasynctask.R$drawable extends java.lang.Object
+{
+    public static final int ic_launcher;
+    public static final int painter;
+
+    public void <init>()
+    {
+        course.examples.threading.threadingasynctask.R$drawable $r0;
+
+        $r0 := @this: course.examples.threading.threadingasynctask.R$drawable;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public static void <clinit>()
+    {
+        <course.examples.threading.threadingasynctask.R$drawable: int painter> = 2130837505;
+
+        <course.examples.threading.threadingasynctask.R$drawable: int ic_launcher> = 2130837504;
+
+        return;
+    }
+}

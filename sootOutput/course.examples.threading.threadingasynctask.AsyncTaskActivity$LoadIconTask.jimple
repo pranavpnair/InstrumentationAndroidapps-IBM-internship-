@@ -1,0 +1,226 @@
+class course.examples.threading.threadingasynctask.AsyncTaskActivity$LoadIconTask extends android.os.AsyncTask
+{
+    final course.examples.threading.threadingasynctask.AsyncTaskActivity this$0;
+
+    void <init>(course.examples.threading.threadingasynctask.AsyncTaskActivity)
+    {
+        course.examples.threading.threadingasynctask.AsyncTaskActivity$LoadIconTask $r0;
+        course.examples.threading.threadingasynctask.AsyncTaskActivity $r1;
+
+        $r0 := @this: course.examples.threading.threadingasynctask.AsyncTaskActivity$LoadIconTask;
+
+        $r1 := @parameter0: course.examples.threading.threadingasynctask.AsyncTaskActivity;
+
+        $r0.<course.examples.threading.threadingasynctask.AsyncTaskActivity$LoadIconTask: course.examples.threading.threadingasynctask.AsyncTaskActivity this$0> = $r1;
+
+        specialinvoke $r0.<android.os.AsyncTask: void <init>()>();
+
+        return;
+    }
+
+    private void sleep()
+    {
+        course.examples.threading.threadingasynctask.AsyncTaskActivity$LoadIconTask $r0;
+        java.lang.InterruptedException $r1;
+        course.examples.threading.threadingasynctask.AsyncTaskActivity $r2;
+        int $i0;
+        long $l1;
+        java.lang.String $r3;
+
+        $r0 := @this: course.examples.threading.threadingasynctask.AsyncTaskActivity$LoadIconTask;
+
+        $r2 = $r0.<course.examples.threading.threadingasynctask.AsyncTaskActivity$LoadIconTask: course.examples.threading.threadingasynctask.AsyncTaskActivity this$0>;
+
+     label1:
+        $i0 = staticinvoke <course.examples.threading.threadingasynctask.AsyncTaskActivity: int access$2(course.examples.threading.threadingasynctask.AsyncTaskActivity)>($r2);
+
+        $l1 = (long) $i0;
+
+        staticinvoke <java.lang.Thread: void sleep(long)>($l1);
+
+     label2:
+        return;
+
+     label3:
+        $r1 := @caughtexception;
+
+        $r3 = virtualinvoke $r1.<java.lang.InterruptedException: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String)>("ThreadingAsyncTask", $r3);
+
+        return;
+
+        catch java.lang.InterruptedException from label1 to label2 with label3;
+    }
+
+    protected transient android.graphics.Bitmap doInBackground(java.lang.Integer[])
+    {
+        course.examples.threading.threadingasynctask.AsyncTaskActivity$LoadIconTask $r0;
+        java.lang.Integer[] $r1;
+        course.examples.threading.threadingasynctask.AsyncTaskActivity $r2;
+        android.content.res.Resources $r3;
+        java.lang.Integer $r4;
+        int $i0, $i1;
+        android.graphics.Bitmap $r5;
+
+        $r0 := @this: course.examples.threading.threadingasynctask.AsyncTaskActivity$LoadIconTask;
+
+        $r1 := @parameter0: java.lang.Integer[];
+
+        $r2 = $r0.<course.examples.threading.threadingasynctask.AsyncTaskActivity$LoadIconTask: course.examples.threading.threadingasynctask.AsyncTaskActivity this$0>;
+
+        $r3 = virtualinvoke $r2.<course.examples.threading.threadingasynctask.AsyncTaskActivity: android.content.res.Resources getResources()>();
+
+        $r4 = $r1[0];
+
+        $i0 = virtualinvoke $r4.<java.lang.Integer: int intValue()>();
+
+        $r5 = staticinvoke <android.graphics.BitmapFactory: android.graphics.Bitmap decodeResource(android.content.res.Resources,int)>($r3, $i0);
+
+        $i0 = 1;
+
+     label1:
+        if $i0 < 11 goto label2;
+
+        return $r5;
+
+     label2:
+        specialinvoke $r0.<course.examples.threading.threadingasynctask.AsyncTaskActivity$LoadIconTask: void sleep()>();
+
+        $r1 = newarray (java.lang.Integer)[1];
+
+        $i1 = $i0 * 10;
+
+        $r4 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>($i1);
+
+        $r1[0] = $r4;
+
+        virtualinvoke $r0.<course.examples.threading.threadingasynctask.AsyncTaskActivity$LoadIconTask: void publishProgress(java.lang.Object[])>($r1);
+
+        $i0 = $i0 + 1;
+
+        goto label1;
+    }
+
+    protected transient volatile java.lang.Object doInBackground(java.lang.Object[])
+    {
+        course.examples.threading.threadingasynctask.AsyncTaskActivity$LoadIconTask $r0;
+        android.graphics.Bitmap $r1;
+        java.lang.Object[] $r2;
+        java.lang.Integer[] $r3;
+
+        $r0 := @this: course.examples.threading.threadingasynctask.AsyncTaskActivity$LoadIconTask;
+
+        $r2 := @parameter0: java.lang.Object[];
+
+        $r3 = (java.lang.Integer[]) $r2;
+
+        $r1 = virtualinvoke $r0.<course.examples.threading.threadingasynctask.AsyncTaskActivity$LoadIconTask: android.graphics.Bitmap doInBackground(java.lang.Integer[])>($r3);
+
+        return $r1;
+    }
+
+    protected void onPostExecute(android.graphics.Bitmap)
+    {
+        course.examples.threading.threadingasynctask.AsyncTaskActivity$LoadIconTask $r0;
+        android.graphics.Bitmap $r1;
+        course.examples.threading.threadingasynctask.AsyncTaskActivity $r2;
+        android.widget.ProgressBar $r3;
+        android.widget.ImageView $r4;
+
+        $r0 := @this: course.examples.threading.threadingasynctask.AsyncTaskActivity$LoadIconTask;
+
+        $r1 := @parameter0: android.graphics.Bitmap;
+
+        $r2 = $r0.<course.examples.threading.threadingasynctask.AsyncTaskActivity$LoadIconTask: course.examples.threading.threadingasynctask.AsyncTaskActivity this$0>;
+
+        $r3 = staticinvoke <course.examples.threading.threadingasynctask.AsyncTaskActivity: android.widget.ProgressBar access$0(course.examples.threading.threadingasynctask.AsyncTaskActivity)>($r2);
+
+        virtualinvoke $r3.<android.widget.ProgressBar: void setVisibility(int)>(4);
+
+        $r2 = $r0.<course.examples.threading.threadingasynctask.AsyncTaskActivity$LoadIconTask: course.examples.threading.threadingasynctask.AsyncTaskActivity this$0>;
+
+        $r4 = staticinvoke <course.examples.threading.threadingasynctask.AsyncTaskActivity: android.widget.ImageView access$1(course.examples.threading.threadingasynctask.AsyncTaskActivity)>($r2);
+
+        virtualinvoke $r4.<android.widget.ImageView: void setImageBitmap(android.graphics.Bitmap)>($r1);
+
+        return;
+    }
+
+    protected volatile void onPostExecute(java.lang.Object)
+    {
+        course.examples.threading.threadingasynctask.AsyncTaskActivity$LoadIconTask $r0;
+        java.lang.Object $r1;
+        android.graphics.Bitmap $r2;
+
+        $r0 := @this: course.examples.threading.threadingasynctask.AsyncTaskActivity$LoadIconTask;
+
+        $r1 := @parameter0: java.lang.Object;
+
+        $r2 = (android.graphics.Bitmap) $r1;
+
+        virtualinvoke $r0.<course.examples.threading.threadingasynctask.AsyncTaskActivity$LoadIconTask: void onPostExecute(android.graphics.Bitmap)>($r2);
+
+        return;
+    }
+
+    protected void onPreExecute()
+    {
+        course.examples.threading.threadingasynctask.AsyncTaskActivity$LoadIconTask $r0;
+        android.widget.ProgressBar $r1;
+        course.examples.threading.threadingasynctask.AsyncTaskActivity $r2;
+
+        $r0 := @this: course.examples.threading.threadingasynctask.AsyncTaskActivity$LoadIconTask;
+
+        $r2 = $r0.<course.examples.threading.threadingasynctask.AsyncTaskActivity$LoadIconTask: course.examples.threading.threadingasynctask.AsyncTaskActivity this$0>;
+
+        $r1 = staticinvoke <course.examples.threading.threadingasynctask.AsyncTaskActivity: android.widget.ProgressBar access$0(course.examples.threading.threadingasynctask.AsyncTaskActivity)>($r2);
+
+        virtualinvoke $r1.<android.widget.ProgressBar: void setVisibility(int)>(0);
+
+        return;
+    }
+
+    protected transient void onProgressUpdate(java.lang.Integer[])
+    {
+        course.examples.threading.threadingasynctask.AsyncTaskActivity$LoadIconTask $r0;
+        java.lang.Integer[] $r1;
+        course.examples.threading.threadingasynctask.AsyncTaskActivity $r2;
+        android.widget.ProgressBar $r3;
+        java.lang.Integer $r4;
+        int $i0;
+
+        $r0 := @this: course.examples.threading.threadingasynctask.AsyncTaskActivity$LoadIconTask;
+
+        $r1 := @parameter0: java.lang.Integer[];
+
+        $r2 = $r0.<course.examples.threading.threadingasynctask.AsyncTaskActivity$LoadIconTask: course.examples.threading.threadingasynctask.AsyncTaskActivity this$0>;
+
+        $r3 = staticinvoke <course.examples.threading.threadingasynctask.AsyncTaskActivity: android.widget.ProgressBar access$0(course.examples.threading.threadingasynctask.AsyncTaskActivity)>($r2);
+
+        $r4 = $r1[0];
+
+        $i0 = virtualinvoke $r4.<java.lang.Integer: int intValue()>();
+
+        virtualinvoke $r3.<android.widget.ProgressBar: void setProgress(int)>($i0);
+
+        return;
+    }
+
+    protected transient volatile void onProgressUpdate(java.lang.Object[])
+    {
+        course.examples.threading.threadingasynctask.AsyncTaskActivity$LoadIconTask $r0;
+        java.lang.Object[] $r1;
+        java.lang.Integer[] $r2;
+
+        $r0 := @this: course.examples.threading.threadingasynctask.AsyncTaskActivity$LoadIconTask;
+
+        $r1 := @parameter0: java.lang.Object[];
+
+        $r2 = (java.lang.Integer[]) $r1;
+
+        virtualinvoke $r0.<course.examples.threading.threadingasynctask.AsyncTaskActivity$LoadIconTask: void onProgressUpdate(java.lang.Integer[])>($r2);
+
+        return;
+    }
+}

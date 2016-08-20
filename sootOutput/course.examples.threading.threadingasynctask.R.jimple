@@ -1,0 +1,14 @@
+public final class course.examples.threading.threadingasynctask.R extends java.lang.Object
+{
+
+    public void <init>()
+    {
+        course.examples.threading.threadingasynctask.R $r0;
+
+        $r0 := @this: course.examples.threading.threadingasynctask.R;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+}

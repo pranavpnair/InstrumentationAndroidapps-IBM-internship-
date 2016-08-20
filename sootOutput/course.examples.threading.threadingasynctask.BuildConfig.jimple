@@ -1,0 +1,22 @@
+public final class course.examples.threading.threadingasynctask.BuildConfig extends java.lang.Object
+{
+    public static final boolean DEBUG;
+
+    public void <init>()
+    {
+        course.examples.threading.threadingasynctask.BuildConfig $r0;
+
+        $r0 := @this: course.examples.threading.threadingasynctask.BuildConfig;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public static void <clinit>()
+    {
+        <course.examples.threading.threadingasynctask.BuildConfig: boolean DEBUG> = 1;
+
+        return;
+    }
+}

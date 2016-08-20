@@ -1,0 +1,117 @@
+public class course.examples.threading.threadingasynctask.AsyncTaskActivity extends android.app.Activity
+{
+    private static final java.lang.String TAG;
+    private int mDelay;
+    private android.widget.ImageView mImageView;
+    private android.widget.ProgressBar mProgressBar;
+
+    public void <init>()
+    {
+        course.examples.threading.threadingasynctask.AsyncTaskActivity $r0;
+
+        $r0 := @this: course.examples.threading.threadingasynctask.AsyncTaskActivity;
+
+        specialinvoke $r0.<android.app.Activity: void <init>()>();
+
+        $r0.<course.examples.threading.threadingasynctask.AsyncTaskActivity: int mDelay> = 500;
+
+        return;
+    }
+
+    static android.widget.ProgressBar access$0(course.examples.threading.threadingasynctask.AsyncTaskActivity)
+    {
+        course.examples.threading.threadingasynctask.AsyncTaskActivity $r0;
+        android.widget.ProgressBar r1;
+
+        $r0 := @parameter0: course.examples.threading.threadingasynctask.AsyncTaskActivity;
+
+        r1 = $r0.<course.examples.threading.threadingasynctask.AsyncTaskActivity: android.widget.ProgressBar mProgressBar>;
+
+        return r1;
+    }
+
+    static android.widget.ImageView access$1(course.examples.threading.threadingasynctask.AsyncTaskActivity)
+    {
+        course.examples.threading.threadingasynctask.AsyncTaskActivity $r0;
+        android.widget.ImageView r1;
+
+        $r0 := @parameter0: course.examples.threading.threadingasynctask.AsyncTaskActivity;
+
+        r1 = $r0.<course.examples.threading.threadingasynctask.AsyncTaskActivity: android.widget.ImageView mImageView>;
+
+        return r1;
+    }
+
+    static int access$2(course.examples.threading.threadingasynctask.AsyncTaskActivity)
+    {
+        course.examples.threading.threadingasynctask.AsyncTaskActivity $r0;
+        int i0;
+
+        $r0 := @parameter0: course.examples.threading.threadingasynctask.AsyncTaskActivity;
+
+        i0 = $r0.<course.examples.threading.threadingasynctask.AsyncTaskActivity: int mDelay>;
+
+        return i0;
+    }
+
+    public void onCreate(android.os.Bundle)
+    {
+        course.examples.threading.threadingasynctask.AsyncTaskActivity $r0;
+        android.os.Bundle $r1;
+        android.view.View $r2;
+        android.widget.ImageView $r3;
+        android.widget.ProgressBar $r4;
+        android.widget.Button $r5;
+        course.examples.threading.threadingasynctask.AsyncTaskActivity$1 $r6;
+        course.examples.threading.threadingasynctask.AsyncTaskActivity$2 $r7;
+
+        $r0 := @this: course.examples.threading.threadingasynctask.AsyncTaskActivity;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        specialinvoke $r0.<android.app.Activity: void onCreate(android.os.Bundle)>($r1);
+
+        virtualinvoke $r0.<course.examples.threading.threadingasynctask.AsyncTaskActivity: void setContentView(int)>(2130903040);
+
+        $r2 = virtualinvoke $r0.<course.examples.threading.threadingasynctask.AsyncTaskActivity: android.view.View findViewById(int)>(2131034112);
+
+        $r3 = (android.widget.ImageView) $r2;
+
+        $r0.<course.examples.threading.threadingasynctask.AsyncTaskActivity: android.widget.ImageView mImageView> = $r3;
+
+        $r2 = virtualinvoke $r0.<course.examples.threading.threadingasynctask.AsyncTaskActivity: android.view.View findViewById(int)>(2131034113);
+
+        $r4 = (android.widget.ProgressBar) $r2;
+
+        $r0.<course.examples.threading.threadingasynctask.AsyncTaskActivity: android.widget.ProgressBar mProgressBar> = $r4;
+
+        $r2 = virtualinvoke $r0.<course.examples.threading.threadingasynctask.AsyncTaskActivity: android.view.View findViewById(int)>(2131034114);
+
+        $r5 = (android.widget.Button) $r2;
+
+        $r6 = new course.examples.threading.threadingasynctask.AsyncTaskActivity$1;
+
+        specialinvoke $r6.<course.examples.threading.threadingasynctask.AsyncTaskActivity$1: void <init>(course.examples.threading.threadingasynctask.AsyncTaskActivity)>($r0);
+
+        virtualinvoke $r5.<android.widget.Button: void setOnClickListener(android.view.View$OnClickListener)>($r6);
+
+        $r2 = virtualinvoke $r0.<course.examples.threading.threadingasynctask.AsyncTaskActivity: android.view.View findViewById(int)>(2131034115);
+
+        $r5 = (android.widget.Button) $r2;
+
+        $r7 = new course.examples.threading.threadingasynctask.AsyncTaskActivity$2;
+
+        specialinvoke $r7.<course.examples.threading.threadingasynctask.AsyncTaskActivity$2: void <init>(course.examples.threading.threadingasynctask.AsyncTaskActivity)>($r0);
+
+        virtualinvoke $r5.<android.widget.Button: void setOnClickListener(android.view.View$OnClickListener)>($r7);
+
+        return;
+    }
+
+    public static void <clinit>()
+    {
+        <course.examples.threading.threadingasynctask.AsyncTaskActivity: java.lang.String TAG> = "ThreadingAsyncTask";
+
+        return;
+    }
+}

@@ -1,0 +1,31 @@
+public final class course.examples.threading.threadingasynctask.R$id extends java.lang.Object
+{
+    public static final int imageView;
+    public static final int loadButton;
+    public static final int otherButton;
+    public static final int progressBar;
+
+    public void <init>()
+    {
+        course.examples.threading.threadingasynctask.R$id $r0;
+
+        $r0 := @this: course.examples.threading.threadingasynctask.R$id;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public static void <clinit>()
+    {
+        <course.examples.threading.threadingasynctask.R$id: int progressBar> = 2131034113;
+
+        <course.examples.threading.threadingasynctask.R$id: int otherButton> = 2131034115;
+
+        <course.examples.threading.threadingasynctask.R$id: int loadButton> = 2131034114;
+
+        <course.examples.threading.threadingasynctask.R$id: int imageView> = 2131034112;
+
+        return;
+    }
+}

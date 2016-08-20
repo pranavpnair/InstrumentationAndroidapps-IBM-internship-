@@ -1,0 +1,31 @@
+public final class course.examples.threading.threadingasynctask.R$string extends java.lang.Object
+{
+    public static final int app_name;
+    public static final int image_desc_string;
+    public static final int load_icon_string;
+    public static final int other_button_string;
+
+    public void <init>()
+    {
+        course.examples.threading.threadingasynctask.R$string $r0;
+
+        $r0 := @this: course.examples.threading.threadingasynctask.R$string;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public static void <clinit>()
+    {
+        <course.examples.threading.threadingasynctask.R$string: int other_button_string> = 2130968578;
+
+        <course.examples.threading.threadingasynctask.R$string: int load_icon_string> = 2130968577;
+
+        <course.examples.threading.threadingasynctask.R$string: int image_desc_string> = 2130968579;
+
+        <course.examples.threading.threadingasynctask.R$string: int app_name> = 2130968576;
+
+        return;
+    }
+}
